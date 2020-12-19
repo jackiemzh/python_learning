@@ -1,7 +1,7 @@
 # use ** for power calculation
 print(100*1.1**7)
 
-mmm = 5
+mmm = 6
 print(type(mmm))
 
 
