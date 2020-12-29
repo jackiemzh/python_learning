@@ -16,7 +16,10 @@
 # 08 lists function
 # 09 tuples
 # 10 functions
-
+# 11 return
+# 12 if statement
+# 13 if statement & comparisons
+# 14 Building a better calculator
 
 
 
@@ -186,4 +189,48 @@ print(coordinates[0])
 
 # 10 functions -----
 
+ def say_hi(name, age):
+     print("Hello! " + name + ". You are " + str(age) +".")
 
+
+say_hi(name="Yoyo", age=5)
+
+
+# 11 return -----
+
+def cube(num):
+    return num*num*num
+
+result = cube(8)
+print(result)
+
+
+# 12 if statement -----
+
+is_male = True
+is_tall = False
+
+# and, or, not
+
+if is_male and is_tall:
+    print("tall male found")
+elif is_male and not(is_tall):
+    print("short male found")
+else:
+    print("no male found")
+
+# 13 if statement & comparisons -----
+
+def max_num(num1, num2, num3):
+    if num1>= num2 and num1>=num3:
+        return num1
+    elif num2>=num3 and num2>=num1:
+        return num2
+    else:
+        return num3
+
+
+print(max_num(1,20,8))
+
+
+# 14 Building a better calculator -----
