@@ -20,6 +20,13 @@
 # 12 if statement
 # 13 if statement & comparisons
 # 14 Building a better calculator
+# 15 Dictionary
+# 16 While loop
+# 17 Building a guessing game
+# 18 for
+# 19 exponent function
+# 20 2D lists & nested loops
+
 
 
 
@@ -234,3 +241,128 @@ print(max_num(1,20,8))
 
 
 # 14 Building a better calculator -----
+
+num1 = float(input("Enter your first number:"))
+op = input("Enter your operator:")
+num2 = float(input("Enter your second number:"))
+
+if op== "+":
+    print(num1+num2)
+elif op=="-":
+    print(num1 - num2)
+elif op=="/":
+    print(num1 / num2)
+elif op=="*":
+    print(num1 * num2)
+else:
+    print("invalid operator")
+
+# 15 Dictionary -----
+# unique key:value
+
+month_conversion = {"Jan":"January",
+                    "Feb":"February",
+                    "Mar":"March",
+                    4:"April"}
+
+print(month_conversion.get("Mar"))
+print(month_conversion.get("Lv","Not a valid key"))
+
+
+# 16 While loop -----
+
+i=1
+while i<10:
+    print(i)
+    i += 1
+
+# 17 Building a guessing game  -----
+
+secret_word = "giraffe"
+guess = ""
+guess_count = 0
+guess_limit = 3
+out_of_guesses = False
+
+while guess != secret_word and not(out_of_guesses):
+    if guess_count <= guess_limit:
+        guess_count += 1
+        guess = input("Enter your guess:")
+    else:
+        out_of_guesses =True
+
+if  out_of_guesses :
+    print("No more chances!")
+else:
+    print("Correct! You guessed " + str(guess_count)+ " times!")
+
+
+# 18 for -----
+
+for letter in "ABCDEFG":
+    print(letter)
+
+friends2 = ['kim',"pop","rada"]
+for f in friends2:
+    print(f)
+
+for ii in range(10):
+    print(ii)
+
+for ii in range(len(friends2)):
+    print(friends2[ii])
+
+
+# 19 exponent function -----
+
+# 2^3
+print(2**3)
+
+#
+def raise_to_power(base_number,power_number):
+
+    if power_number == 1:
+        result = base_number
+    else:
+        result= 1
+        for index in range(power_number):
+            result = result* base_number
+    return result
+
+print(raise_to_power(3,4))
+
+
+# 20 2D lists & nested loops -----
+
+number_grid = [
+    [1,2,3],
+    [4,5,6],
+    [7,8,9],
+    [0]
+]
+
+# [row index] [column index]
+print(number_grid[0][2])
+
+
+for row in number_grid:
+    print(row)
+    for col in row:
+        print(col)
+
+
+# 21 build a translator -----
+
+def my_translate(phase):
+    translation = ""
+    for letter in phase:
+        if letter in "AEIOUaeiou":
+            translation = translation + "g"
+        else:
+            translation = translation + letter
+
+    return translation
+
+print(my_translate("A1234"))
+
+
