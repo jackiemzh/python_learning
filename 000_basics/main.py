@@ -5,6 +5,7 @@
 # Press ⌃R to execute it or replace it with your code.
 # Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
 
+'''
 # TABLE OF CONTENTS -----
 # 01 PRINT
 # 02 STRING
@@ -26,8 +27,12 @@
 # 18 for
 # 19 exponent function
 # 20 2D lists & nested loops
-
-
+# 21 comments
+# 22 try except
+# 23 reading files
+# 24 writing files
+# 25 *Modules & pip
+'''
 
 
 
@@ -364,5 +369,92 @@ def my_translate(phase):
     return translation
 
 print(my_translate("A1234"))
+
+
+# 21 comments -----
+
+''' 
+long comments
+long comments
+'''
+
+
+
+# 22 try except (catching errors) -----
+
+try:
+    value =  10/0
+    number0 =  int(input("Enter your number:"))
+    print(number0)
+except ZeroDivisionError as ERR:
+    print(ERR)
+except ValueError:
+    print("invalid input")
+
+
+# 23 reading files -----
+# r (read), w (write), a (append), r+ (read & write)
+
+employee_file = open("/Users/jackiemzh/Documents/DS/python_learning/000_basics/txt/scratch.txt", "r")
+
+print(employee_file.readable())
+
+# save as arrary
+em_arrary = employee_file.readlines()
+print(em_arrary)
+print(em_arrary[1])
+
+employee_file.close()
+
+
+# 24 writing files -----
+
+
+employee_file = open("/Users/jackiemzh/Documents/DS/python_learning/000_basics/txt/scratch.txt", "a")
+employee_file.write("Tom - HR")
+employee_file.write("\nKelly - Customer Service")
+employee_file.close()
+
+employee_file0 = open("/Users/jackiemzh/Documents/DS/python_learning/000_basics/txt/scratch.txt", "r")
+print(employee_file0.readlines())
+
+# overwrite
+employee_file1 = open("/Users/jackiemzh/Documents/DS/python_learning/000_basics/txt/scratch1.txt", "w")
+employee_file1.write("Kelly - Customer Service")
+employee_file1.close()
+
+
+employee_file2 = open("/Users/jackiemzh/Documents/DS/python_learning/000_basics/txt/index.html", "w")
+employee_file2.write("<p>This is HTML </p>")
+employee_file2.close()
+
+
+
+# 25 *Modules & pip -----
+# https://docs.python.org/3/py-modindex.html
+# source script
+
+# current directory
+import os
+print(os.getcwd())
+
+# change directory
+os.chdir("/Users/jackiemzh/Documents/DS/python_learning/000_basics/source_funcs")
+
+#import useful_tools
+
+
+
+# use pip (package manager) to install python docx
+# Terminial
+# pip --version
+# pip install python - docx
+# pip uninstall python - docx
+
+
+
+
+
+
 
 
